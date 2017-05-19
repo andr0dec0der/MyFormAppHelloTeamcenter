@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5503038E-4D69-4703-9F79-90C8D9061A70}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HelloTeamcenter</RootNamespace>
+    <AssemblyName>HelloTeamcenter</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\libs\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\libs\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TcSoaClient, Culture=neutral, PublicKeyToken=0edd5b5ddd601444, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\TcSoaClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TcSoaCommon, Culture=neutral, PublicKeyToken=0edd5b5ddd601444, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\TcSoaCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TcSoaCoreStrong, Culture=neutral, PublicKeyToken=0edd5b5ddd601444, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\TcSoaCoreStrong.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TcSoaCoreTypes, Culture=neutral, PublicKeyToken=0edd5b5ddd601444, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\TcSoaCoreTypes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TcSoaQueryStrong, Culture=neutral, PublicKeyToken=0edd5b5ddd601444, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\TcSoaQueryStrong.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TcSoaQueryTypes, Culture=neutral, PublicKeyToken=0edd5b5ddd601444, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\TcSoaQueryTypes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TcSoaStrongModel, Culture=neutral, PublicKeyToken=0edd5b5ddd601444, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\TcSoaStrongModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TcServerNetBindingInterface, Culture=neutral, PublicKeyToken=0edd5b5ddd601444, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\TcServerNetBindingInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="TcServerNetBinding, Culture=neutral, PublicKeyToken=0edd5b5ddd601444, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\TcServerNetBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="TcServerNetBinding64, Culture=neutral, PublicKeyToken=0edd5b5ddd601444, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\TcServerNetBinding64.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clientx\MyFormAppCredentialManager.cs" />
+    <Compile Include="clientx\MyFormAppExceptionHandler.cs" />
+    <Compile Include="clientx\MyFormAppPartialErrorListener.cs" />
+    <Compile Include="clientx\MyFormAppRequestListener.cs" />
+    <Compile Include="clientx\MyFormAppModelEventListener.cs" />
+    <Compile Include="clientx\MyFormAppSession.cs" />
+    <Compile Include="form\ExampleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ExampleForm.Designer.cs">
+      <DependentUpon>ExampleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hello\DataManagement.cs" />
+    <Compile Include="hello\MyHello.cs" />
+    <Compile Include="hello\HomeFolder.cs" />
+    <Compile Include="hello\Query.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="form\ExampleForm.resx">
+      <DependentUpon>ExampleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
